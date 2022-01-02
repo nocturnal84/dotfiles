@@ -3,4 +3,3 @@
 package="\033[1;34m\033[0m" 
 echo -e "$package \033[1mUpdating packages on \033[1;31m$HOSTNAME\033[0m $package\033[1m...\033[0m"
 sudo pacman -Syyu
-touch /tmp/POLYBAR_PACMAN_UPDATED
