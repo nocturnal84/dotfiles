@@ -14,3 +14,10 @@ systemd
 user-dirs.dirs
 user-dirs.locale
 xfce4
+
+cmus/cache
+cmus/command-history
+cmus/lib.pl
+cmus/playlists
+cmus/search-history
+
