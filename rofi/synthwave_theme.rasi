@@ -1,0 +1,7 @@
+* {
+    background: #261f32;
+    primary: #f625a3;
+    secondary: #91eed9;
+    tertiary: #66edad;
+    urgent: #de3cf7;
+}

@@ -3,26 +3,24 @@
  * Maintainer: joekamprad <joekamprad@endeavouros.com>
  *******************************************************/
 configuration {
-    font:                           "Oswald 10";
-    show-icons:                     false;
-    /*icon-theme: 		    "Arc-X-D";*/
-    scroll-method:                  0;
-    disable-history:                false;
-    sidebar-mode: 		    false;
+    font:            "Oswald 10";
+    show-icons:      false;
+    scroll-method:   0;
+    disable-history: false;
+    sidebar-mode:    false;
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+@import "~/.config/rofi/synthwave_theme.rasi"
 
 window {
-    /*background-color:               @background;*/
-    background-color:               rgba(38, 31, 50, 100%);
+    background-color:               @background;
     border:                         1;
-    border-color:                   rgba(38, 31, 50, 100%);
+    border-color:                   @background;
     padding:                        10;
     width:                          120px;
     location:                       north east;
     y-offset:                       27;
-/*x-offset:	                    850;*/
 }
 listview {
     lines:                          5;
@@ -50,10 +48,8 @@ element.normal.active {
     text-color:       @active-foreground;
 }
 element.selected.normal {
-    /*background-color: @selected-normal-background;*/
-    /*text-color:       @selected-normal-foreground;*/
-    background-color: rgba(38, 31, 50, 100%);
-    text-color:       rgba(248, 37, 164, 100%);
+    background-color: @background;
+    text-color:       @primary;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;

@@ -321,8 +321,8 @@ set $ws10 "10"
 assign [class="(?i)firefox"] $ws1
 assign [instance="Alacritty-fixed"] $ws2
 assign [class="discord"] $ws3
-assign [class="Thunderbird"] $ws4
-assign [class="TelegramDesktop"] $ws5
+assign [class="Steam"] $ws4
+assign [class="code-oss"] $ws5
 
 
 # automatic set focus new window if it opens on another workspace then the current:
@@ -430,16 +430,16 @@ set $grey		#b0b5bd
 set $mediumgrey		#8b8b8b
 set $yellowbrown	#e1b700
 set $deeppurple         #261f32c0
-set $hotpink            #f625a3
-set $synthblue          #03edf9
+set $primary_synthwave84            #f625a3
+set $secondary_synthwave84          #03edf9
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue $darkblue	$white		$purple		$hotpink
+client.focused		    $lightblue $darkblue	$white		$purple		$primary_synthwave84
 # client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
 client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
 client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$synthblue
+client.urgent		    $urgentred	$urgentred	$white		$purple		$secondary_synthwave84
 
 
 ############################################

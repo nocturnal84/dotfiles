@@ -15,12 +15,12 @@ configuration {
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"
+@import "~/.config/rofi/synthwave_theme.rasi"
 
 window {
-    /*background-color: @background;*/
-    background-color: rgba(38, 31, 50, 100%);
+    background-color: @background;
     border:           1;
-    border-color: rgba(38, 31, 50, 100%);
+    border-color:     @background;
     padding:          10;
 }
 listview {
@@ -61,30 +61,23 @@ element.normal.normal {
 }
 element.normal.urgent {
     background-color: @urgent-background;
-    /*text-color:       @urgent-foreground;*/
-    text-color: rgba(222, 60, 247, 100%);
+    text-color:       @urgent;
 }
 element.normal.active {
-    /*background-color: @active-background;*/
     background-color: transparent;
-    /*text-color:       @active-foreground;*/
-    text-color: rgba(145, 238, 217, 100%);
+    text-color:       @secondary;
 }
 element.selected.normal {
-    /*background-color: @selected-normal-background;*/
-    background-color: rgba( 38, 31, 50, 100%);
-    /*text-color:       @selected-normal-foreground;*/
-    text-color: rgba( 248, 37, 164, 100%);
+    background-color: @background;
+    text-color:       @primary;
 }
 element.selected.urgent {
     background-color: @selected-urgent-background;
     text-color:       @selected-urgent-foreground;
 }
 element.selected.active {
-    /*background-color: @selected-active-background;*/
-    background-color: rgba( 38, 31, 50, 100%);
-    /*text-color:       @selected-active-foreground;*/
-    text-color: rgba(102, 237, 173, 100%);
+    background-color: @background;
+    text-color:       @tertiary;
 }
 element.alternate.normal {
     background-color: @alternate-normal-background;

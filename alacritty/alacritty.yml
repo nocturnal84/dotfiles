@@ -175,12 +175,82 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 #draw_bold_text_with_bright_colors: false
 
-# Colors (Tomorrow Night)
-colors:
-  # Default colors
+# Colors (Synthwave '84)
+theme: &synthwave84
   primary:
     background: '#261f32'
     foreground: '#f2ebe0'
+    bright_foreground: '#ffffff'
+  cursor:
+    text: CellBackground
+    cursor: '#f825a4'
+  selection:
+    text: '#ffffff'
+    background: '#f825a4'
+
+  # Normal colors
+  normal:
+    black:   '#393939'
+    red:     '#f625a3'
+    green:   '#66edad'
+    yellow:  '#ff7f32'
+    blue:    '#03edf9'
+    magenta: '#de3cf7'
+    cyan:    '#91eed9'
+    white:   '#f2ebe0'
+
+  # Bright colors
+  bright:
+    black:   '#747369'
+    red:     '#b31a77'
+    green:   '#40946d'
+    yellow:  '#ad5621'
+    blue:    '#018890'
+    magenta: '#a52dba'
+    cyan:    '#67aa9a'
+    white:   '#f2ebe0'
+
+# Colors (Mellow Marsh)
+theme: &mellow-marsh
+  primary:
+    background: '#223442'
+    foreground: '#f2f0f1'
+    bright_foreground: '#fefefe'
+  cursor:
+    text: CellBackground
+    cursor: '#f825a4'
+  selection:
+    text: '#fefefe'
+    background: '#f825a4'
+
+  # Normal colors
+  normal:
+    black:   '#223442'
+    red:     '#9d3f40'
+    green:   '#6c9c39'
+    yellow:  '#dfd974'
+    blue:    '#50dafe'
+    magenta: '#9858ac'
+    cyan:    '#0281b8'
+    white:   '#f2f0f1'
+
+  # Bright colors
+  bright:
+    black:   '#415b6c'
+    red:     '#5d1e27'
+    green:   '#546e2d'
+    yellow:  '#d0c45c'
+    blue:    '#27a9f4'
+    magenta: '#764284'
+    cyan:    '#1475a2'
+    white:   '#fefefe'
+
+# Reference a theme anchor
+colors: *mellow-marsh
+  # Default colors
+  #primary:
+  #  background: '#261f32'
+  #  foreground: '#f2ebe0'
 
     # Bright and dim foreground colors
     #
@@ -189,7 +259,7 @@ colors:
     # `draw_bold_text_with_bright_colors` is `false`, the normal foreground
     # color will be used.
     #dim_foreground: '#828482'
-    bright_foreground: '#ffffff'
+  #  bright_foreground: '#ffffff'
 
   # Cursor colors
   #
@@ -197,9 +267,9 @@ colors:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  cursor:
-    text: CellBackground
-    cursor: '#f825a4'
+  #cursor:
+  #  text: CellBackground
+  #  cursor: '#f825a4'
 
 
   # Vi mode cursor colors
@@ -263,31 +333,31 @@ colors:
   #
   # Allowed values are CellForeground/CellBackground, which reference the
   # affected cell, or hexadecimal colors like #ff00ff.
-  selection:
-    text: '#ffffff'
-    background: '#f825a4'
+  #selection:
+  #  text: '#ffffff'
+  #  background: '#f825a4'
 
   # Normal colors
-  normal:
-    black:   '#393939'
-    red:     '#f625a3'
-    green:   '#66edad'
-    yellow:  '#ff7f32'
-    blue:    '#03edf9'
-    magenta: '#de3cf7'
-    cyan:    '#91eed9'
-    white:   '#f2ebe0'
+  #normal:
+  #  black:   '#393939'
+  #  red:     '#f625a3'
+  #  green:   '#66edad'
+  #  yellow:  '#ff7f32'
+  #  blue:    '#03edf9'
+  #  magenta: '#de3cf7'
+  #  cyan:    '#91eed9'
+  #  white:   '#f2ebe0'
 
   # Bright colors
-  bright:
-    black:   '#747369'
-    red:     '#b31a77'
-    green:   '#40946d'
-    yellow:  '#ad5621'
-    blue:    '#018890'
-    magenta: '#a52dba'
-    cyan:    '#67aa9a'
-    white:   '#f2ebe0'
+  #bright:
+  #  black:   '#747369'
+  #  red:     '#b31a77'
+  #  green:   '#40946d'
+  #  yellow:  '#ad5621'
+  #  blue:    '#018890'
+  #  magenta: '#a52dba'
+  #  cyan:    '#67aa9a'
+  #  white:   '#f2ebe0'
 
   # Dim colors
   #
