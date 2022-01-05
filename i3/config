@@ -49,7 +49,7 @@ workspace_layout default
 ##############################
 
 #border indicator on windows:
-new_window pixel 1
+new_window pixel 3
 
 # thin borders
 # hide_edge_borders both
@@ -331,12 +331,13 @@ for_window [class=(?i)firefox] focus
 for_window [class=Thunar] focus
 for_window [class=Thunderbird] focus
 for_window [class=TelegramDesktop] focus
+for_window [class=".*"] border pixel 4
 
 #############################################
 # autostart applications/services on login: #
 #############################################
 # launch polybar
-exec_always --no-startup-id ~/.config/polybar/synthwave84/launch.sh
+exec_always --no-startup-id ~/.config/polybar/mellow-marsh/launch.sh
 
 #get auth work with polkit-gnome
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -432,14 +433,21 @@ set $yellowbrown	#e1b700
 set $deeppurple         #261f32c0
 set $primary_synthwave84            #f625a3
 set $secondary_synthwave84          #03edf9
+set $inactive_border_synthwave84    #000000
+set $unfocused_border_synthwave     #383c4a
+set $primary_mellow_marsh         #9858ac
+set $indicator_mellow_marsh       #764284
+set $secondary_mellow_marsh       #0281b8
+set $inactive_border_mellow_marsh #415b6c
+set $unfocused_border_mellow_marsh #223442
 
 # define colors for windows:
-#class		        	border		bground		text		indicator	child_border
-client.focused		    $lightblue $darkblue	$white		$purple		$primary_synthwave84
-# client.focused		    $lightblue	$darkblue	$white		$purple		$mediumgrey
-client.unfocused	    $darkblue	$darkblue	$grey		$purple		$darkgrey
-client.focused_inactive	$darkblue	$darkblue	$grey		$purple		$black
-client.urgent		    $urgentred	$urgentred	$white		$purple		$secondary_synthwave84
+#class		        	border		bground		text		indicator	                   child_border
+client.focused		    $lightblue  $darkblue	$white		$primary_mellow_marsh	       $primary_mellow_marsh
+# client.focused		$lightblue	$darkblue	$white		$purple		                   $mediumgrey
+client.unfocused	    $darkblue	$darkblue	$grey		$unfocused_border_mellow_marsh $unfocused_border_mellow_marsh
+client.focused_inactive	$darkblue	$darkblue	$grey		$inactive_border_mellow_marsh  $inactive_border_mellow_marsh
+client.urgent		    $urgentred	$urgentred	$white		$secondary_mellow_marsh        $secondary_mellow_marsh
 
 
 ############################################
