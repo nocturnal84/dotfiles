@@ -9,3 +9,8 @@ $SCREENSHOT
 convert $PICTURE -blur $BLUR $PICTURE
 i3lock -i $PICTURE
 rm $PICTURE
+sleep 60
+if pgrep -x "i3lock" > /dev/null; then
+  # Put the display to sleep only if i3lock is still running
+  xset dpms force off
+fi
