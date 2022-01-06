@@ -17,7 +17,7 @@ while getopts "qnpt" arg; do
                 echo "${icon}$label"
 
             else
-                echo "$status"
+                echo ""
             fi
             ;;
         t)
