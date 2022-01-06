@@ -323,6 +323,7 @@ assign [instance="Alacritty-fixed"] $ws2
 assign [class="discord"] $ws3
 assign [class="Steam"] $ws4
 assign [class="code-oss"] $ws5
+assign [class="cmus_cover_art"] $ws2
 
 
 # automatic set focus new window if it opens on another workspace then the current:
@@ -413,6 +414,7 @@ for_window [class="Blueberry.py" instance="blueberry.py"] floating enable
 for_window [class="Bluetooth-sendto" instance="bluetooth-sendto"] floating enable
 for_window [class="Pamac-manager"] floating enable
 for_window [class="feh"] floating enable
+for_window [class="cmus_cover_art"] floating enable
 
 ######################################
 # color settings for bar and windows #

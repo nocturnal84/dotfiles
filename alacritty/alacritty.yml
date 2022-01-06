@@ -236,7 +236,7 @@ theme: &mellow-marsh
 
   # Bright colors
   bright:
-    black:   '#415b6c'
+    black:   '#1a2d3b'
     red:     '#5d1e27'
     green:   '#546e2d'
     yellow:  '#d0c45c'
