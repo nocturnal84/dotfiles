@@ -442,6 +442,7 @@ set $indicator_mellow_marsh       #764284
 set $secondary_mellow_marsh       #0281b8
 set $inactive_border_mellow_marsh #415b6c
 set $unfocused_border_mellow_marsh #223442
+set $urgent_mellow_marsh #9d3f40
 
 # define colors for windows:
 #class		        	border		bground		text		indicator	                   child_border
@@ -449,7 +450,7 @@ client.focused		    $lightblue  $darkblue	$white		$primary_mellow_marsh	       $
 # client.focused		$lightblue	$darkblue	$white		$purple		                   $mediumgrey
 client.unfocused	    $darkblue	$darkblue	$grey		$unfocused_border_mellow_marsh $unfocused_border_mellow_marsh
 client.focused_inactive	$darkblue	$darkblue	$grey		$inactive_border_mellow_marsh  $inactive_border_mellow_marsh
-client.urgent		    $urgentred	$urgentred	$white		$secondary_mellow_marsh        $secondary_mellow_marsh
+client.urgent		    $urgentred	$urgentred	$white		$urgent_mellow_marsh           $urgent_mellow_marsh
 
 
 ############################################
