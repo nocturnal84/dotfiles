@@ -21,4 +21,8 @@ cmus/lib.pl
 cmus/playlists
 cmus/search-history
 
-Code - OSS
+!Code\ -\ OSS/
+Code\ -\ OSS/*
+!Code\ -\ OSS/User/
+Code\ -\ OSS/User/*
+!Code\ -\ OSS/User/settings.json

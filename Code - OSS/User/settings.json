@@ -1,0 +1,83 @@
+{
+    "workbench.colorTheme": "Aura Dark",
+    "window.zoomLevel": -1,
+    "editor.fontFamily": "'Hasklug Nerd Font Mono', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "workbench.colorCustomizations": {
+        "[Aura Dark]": {
+            "activityBar.background": "#1a2d3b",
+            "activityBar.foreground": "#764284",
+            "activityBarBadge.background": "#6c9c39",
+            "activityBarBadge.foreground": "#f2f0f1",
+            "activityBar.inactiveForeground": "#f2f0f1",
+            "activityBar.activeBackground": "#223442",
+            "activityBar.activeFocusBorder": "#9858ac",
+            "activityBar.activeBorder": "#764284",
+            "activityBar.border": "#223442",
+            "statusBar.background": "#1a2d3b",
+            "statusBar.border": "#223442",
+            "statusBar.foreground": "#f2f0f1",
+            "notifications.background": "#1a2d3b",
+            "notifications.foreground": "#f2f0f1",
+            "editor.background": "#1a2d3b",
+            "editor.findMatchBackground": "#9d3f40",
+            "sideBar.background": "#1a2d3b",
+            "sideBar.foreground": "#f2f0f1",
+            "sideBarSectionHeader.background": "#1475a2",
+            "sideBarSectionHeader.foreground": "#f2f0f1",
+            "sideBarTitle.foreground": "#f2f0f1",
+            "tab.activeBackground": "#223442",
+            "tab.activeForeground": "#f2f0f1",
+            "tab.activeBorderTop": "#9858ac",
+            "tab.inactiveBackground": "#1a2d3b",
+            "tab.inactiveForeground": "#f2f0f1",
+            "gitDecoration.untrackedResourceForeground": "#1475a2",
+            "gitDecoration.ignoredResourceForeground": "#d0c45c",
+            "gitDecoration.addedResourceForeground": "#6c9c39",
+            "gitDecoration.deletedResourceForeground": "#5d1e27",
+            "gitDecoration.modifiedResourceForeground": "#50dafe",
+            "gitDecoration.stageModifiedResourceForeground": "#27a9f4",
+            "gitDecoration.stageDeletedResourceForeground": "#9d3f40",
+            "editorLineNumber.foreground": "#f2f0f1",
+            "editorLineNumber.activeForeground": "#0281b8",
+            "editor.selectionBackground": "#1475a2",
+            "editor.selectionForeground": "#fefefe",
+            "editor.selectionHighlightBorder": "#0281b8"
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "[Aura Dark]": {
+            "comments": "#546e2d",
+            "functions": "#50dafe",
+            "types": "#9858ac",
+            "keywords": "#9d3f40",
+            "numbers": "#dfd974",
+            "strings": "#1475a2",
+            "variables": "#0281b8",
+            "textMateRules": [{
+                "scope": "keyword.operator",
+                "settings": {
+                    "foreground": "#fefefe",
+                    "fontStyle": "bold"
+                }
+            }, {
+                "scope": "entity",
+                "settings": {
+                    "foreground": "#764284"
+                }
+            }, {
+                "scope": "variable.other.property",
+                "settings": {
+                    "foreground": "#6c9c39",
+                    "fontStyle": "bold"
+                }
+            }
+            , {
+                "scope": "constant",
+                "settings": {
+                    "foreground": "#d0c45c",
+                    "fontStyle": "italic"
+                }
+            }]
+        }
+    }
+}
