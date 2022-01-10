@@ -11,7 +11,8 @@ configuration {
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"
-@import "~/.config/rofi/synthwave_theme.rasi"
+/* @import "~/.config/rofi/synthwave_theme.rasi" */
+@import "~/.config/rofi/mellow_marsh_theme.rasi"
 
 window {
     background-color:               @background;
@@ -20,7 +21,7 @@ window {
     padding:                        10;
     width:                          120px;
     location:                       north east;
-    y-offset:                       27;
+    y-offset:                       @windowyoffset;
 }
 listview {
     lines:                          5;
@@ -112,7 +113,7 @@ inputbar {
 }
 textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        "";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }

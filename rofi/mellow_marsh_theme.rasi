@@ -1,0 +1,9 @@
+* {
+    font: "Nunito Bold 11";
+    background: #223442;
+    primary: #9858ac;
+    secondary: #6c9c39;
+    tertiary: #50dafe;
+    urgent: #9d3f40;
+    windowyoffset: 37px;
+}

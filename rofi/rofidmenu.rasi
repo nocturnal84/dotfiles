@@ -15,7 +15,8 @@ configuration {
 }
 
 @import "~/.config/rofi/arc_dark_transparent_colors.rasi"
-@import "~/.config/rofi/synthwave_theme.rasi"
+/* @import "~/.config/rofi/synthwave_theme.rasi" */
+@import "~/.config/rofi/mellow_marsh_theme.rasi"
 
 window {
     background-color: @background;
