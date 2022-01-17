@@ -1,0 +1,90 @@
+(include "./music.yuck")
+(include "./fetch.yuck")
+(include "./system.yuck")
+(include "./power.yuck")
+(include "./packages.yuck")
+(include "./time.yuck")
+(defwindow music 
+           :monitor 0
+           :geometry (geometry :x "400px"
+                               :y "200px"
+                               :width "200px"
+                               :height "394px"
+                               :anchor "top left")
+           :stacking "fg"
+           :reserve (struts :distance "40px" :side "top")
+           :windowtype "normal"
+           :wm-ignore true
+  (music)
+)
+(defwindow fetch
+  :monitor 0
+  :geometry (geometry
+    :x "1020px"
+    :y "200px"
+    :width "200px"
+    :height "200px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "normal"
+  :wm-ignore true
+  (fetch)
+)
+(defwindow system
+  :monitor 0
+  :geometry (geometry
+    :x "690px"
+    :y "460px"
+    :width "315px"
+    :height "134px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "normal"
+  :wm-ignore true
+  (system)
+)
+(defwindow power
+  :monitor 0
+  :geometry (geometry
+    :x "690px"
+    :y "370px"
+    :width "315px"
+    :height "50px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "normal"
+  :wm-ignore true
+  (power)
+)
+(defwindow packages
+  :monitor 0
+  :geometry (geometry
+    :x "1020px"
+    :y "410px"
+    :width "200px"
+    :height "184px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "normal"
+  :wm-ignore true
+  (packages)
+)
+
+(defwindow time
+  :monitor 0
+  :geometry (geometry
+    :x "690px"
+    :y "200px"
+    :width "50px"
+    :height "50px"
+    :anchor "top left")
+  :stacking "fg"
+  :reserve (struts :distance "40px" :side "top")
+  :windowtype "normal"
+  :wm-ignore true
+  (time)
+)

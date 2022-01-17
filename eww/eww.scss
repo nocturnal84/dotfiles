@@ -1,0 +1,196 @@
+* {
+  all: unset;
+}
+window {
+  font-family: Nunito;
+  font-size: 19px;
+  background-color: transparent;
+  color: #f2f0f1;
+  padding: 20px;
+  background-color: #223442;
+  border: 4px solid #1a2d3b;
+  border-radius: 10px;
+}
+
+.cmus {
+  padding: 20px 0 0 0;
+}
+
+.cmus .cover {
+  background-size: cover;
+  border: 2px solid #1a2d3b;
+  border-radius: 5px;
+  box-shadow: 2px 2px 7px #111;
+}
+
+.cmus .controls {
+  font-family: 'Hasklug Nerd Font Mono';
+  font-size: 24px;
+}
+
+.cmus .controls .toggle {
+  font-size: 48px;
+  color: #6c9c39;
+}
+
+.cmus scale {
+  padding: 20px;
+}
+
+.cmus scale trough {
+	background-color: #1a2d3b;
+	border-radius: 16px;
+	min-height: 15px;
+	min-width: 240px;
+  box-shadow: 0 -2px 2px rgba(34, 34, 34, 0.5) inset;
+}
+
+.cmus scale trough highlight {
+	border-radius: 16px;
+}
+
+.cmus scale trough highlight {
+	background-color: #764284;
+}
+
+label.song {
+  color: #764284;
+  font-weight: 700;
+}
+label.artist {
+  color: #1475a2;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+
+.fetch {
+  padding: 10px 0;
+}
+
+.fetch-header {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.fetch-l-col, .fetch-r-col {
+  font-family: 'Hasklug Nerd Font Mono';
+}
+
+.fetch-l-col {
+  font-size: 24px;
+}
+
+.fetch-r-col {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.fetch-os {
+  color: #9d3f40;
+}
+
+.fetch-kernel {
+  color: #6c9c39;
+}
+
+.fetch-packages {
+  color: #50dafe;
+}
+
+.fetch-wm {
+  color: #0281b8;
+}
+
+.fetch-term {
+  color: #9858ac;
+}
+
+.system label {
+  font-family: 'Hasklug Nerd Font Mono';
+  font-size: 32px;
+  padding: 0 15px;
+}
+
+.system scale trough {
+	background-color: #1a2d3b;
+	border-radius: 16px;
+	min-height: 15px;
+	min-width: 240px;
+  box-shadow: 0 -2px 2px rgba(34, 34, 34, 0.5) inset;
+}
+
+.system scale trough highlight {
+	border-radius: 16px;
+}
+
+.system .cpu {
+  color: #9858ac;
+  scale trough highlight {
+	  background-color: #9858ac;
+  }
+}
+
+.system .memory {
+  color: #1475a2;
+  scale trough highlight {
+    background-color: #1475a2;
+  }
+}
+
+.system .disk {
+  color: #6c9c39;
+  scale trough highlight {
+    background-color: #6c9c39;
+  }
+}
+
+.logout, .reboot, .shutdown, .lock {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.logout {
+  color: #9858ac;
+}
+
+.reboot {
+  color: #d0c45c;
+}
+
+.shutdown {
+  color: #9d3f40;
+}
+
+.lock {
+  font-size: 50px;
+  color: #1475a2;
+}
+.update-container {
+  font-size: 64px;
+}
+
+.package-icon {
+  color: #50dafe;
+  padding-right: 10px;
+}
+
+.time {
+  font-weight: 700;
+  padding: 20px;
+}
+.hour, .minute {
+  font-family: "Hasklug Nerd Font Mono";
+  font-size: 70px;
+  color: #27a9f4;
+}
+
+.medidiem {
+  color: #546e2d;
+  font-size: 48px;
+}
+
+.date {
+  color: #d0c45c;
+  font-weight: 300;
+}

@@ -1,0 +1,31 @@
+(deflisten user :initial "" `echo "$USER"`)
+(deflisten host :initial "" `echo "$HOSTNAME"`)
+(deflisten os :initial "" `awk -F "=" '/^PRETTY_NAME/{ print $2 }' /etc/os-release`)
+(deflisten term :initial "" `basename $(echo "$TERMINAL")`)
+(deflisten kernel :initial "" `uname -r`)
+(deflisten wm :initial "" `echo "$XDG_CURRENT_DESKTOP"`)
+(defpoll packages :initial "0" :interval "10m" `pacman -Qq | wc -l`)
+(defpoll uptimeh :initial "0 hours" :interval "1m" `uptime -p | awk '{ print $2 " " $3 }' | sed 's/,//'`)
+(defpoll uptimem :initial "0 minutes" :interval "1m" `uptime -p | awk '{ print $4 " " $5 }'`)
+(defwidget fetch []
+  (box :class "fetch" :orientation "v" :space-evenly false
+    (label :class "fetch-header" :text "${user}@${host}")
+
+    (box :class "fetch-rows" :orientation "h" :space-evenly false :halign "center"
+      (box :class "fetch-l-col" :orientation "v" :space-evenly true :width 40
+        (label :class "fetch-os" :text " · ")
+        (label :class "fetch-kernel" :text " · ")
+        (label :class "fetch-packages" :text " · ")
+        (label :class "fetch-wm" :text " · ")
+        (label :class "fetch-term" :text " · ")
+      )
+      (box :class "fetch-r-col" :orientation "v" :space-evenly true :halign "end" :hexpand true
+        (label :class "fetch-os" :text os :halign "start")
+        (label :class "fetch-kernel" :text kernel :halign "start")
+        (label :class "fetch-packages" :text packages :halign "start")
+        (label :class "fetch-wm" :text wm :halign "start")
+        (label :class "fetch-term" :text term :halign "start")
+      )
+    )
+  )
+)

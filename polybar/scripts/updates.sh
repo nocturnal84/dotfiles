@@ -5,6 +5,10 @@ POLYBAR_LOCK=/tmp/POLYBAR_PACMAN_UPDATED
 
 check_updates() {
     updates=$(checkupdates 2>/dev/null | wc -l)
+    if [[ -n $(pgrep -u $UID -x eww) ]]; then
+      # Not the cleanest way to handle this, but share this info with eww
+      eww update updates="$updates"
+    fi
     echo $updates
 }
 

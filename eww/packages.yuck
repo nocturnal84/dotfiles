@@ -1,0 +1,9 @@
+(defvar updates 0)
+(defwidget packages []
+  (box :orientation "v" :space-evenly true :width 150 :height 150
+    (box :class "update-container" :orientation "h" :space-evenly false :halign "center"
+      (label :class "package-icon" :text {updates == 0 ? "" : ""})
+      (label :class "package-count" :text updates)
+    )
+  )
+)
