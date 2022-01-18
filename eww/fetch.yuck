@@ -15,7 +15,7 @@
       (box :class "fetch-l-col" :orientation "v" :space-evenly true :width 40
         (label :class "fetch-os" :text " · ")
         (label :class "fetch-kernel" :text " · ")
-        (label :class "fetch-packages" :text " · ")
+        (label :class "fetch-packages" :text " · ")
         (label :class "fetch-wm" :text " · ")
         (label :class "fetch-term" :text " · ")
       )

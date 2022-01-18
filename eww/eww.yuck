@@ -6,7 +6,7 @@
 (include "./time.yuck")
 (defwindow music 
            :monitor 0
-           :geometry (geometry :x "400px"
+           :geometry (geometry :x "495px"
                                :y "200px"
                                :width "200px"
                                :height "394px"
@@ -20,7 +20,7 @@
 (defwindow fetch
   :monitor 0
   :geometry (geometry
-    :x "1020px"
+    :x "1145px"
     :y "200px"
     :width "200px"
     :height "200px"
@@ -34,10 +34,10 @@
 (defwindow system
   :monitor 0
   :geometry (geometry
-    :x "690px"
-    :y "460px"
-    :width "315px"
-    :height "134px"
+    :x "785px"
+    :y "435px"
+    :width "350px"
+    :height "159px"
     :anchor "top left")
   :stacking "fg"
   :reserve (struts :distance "40px" :side "top")
@@ -48,9 +48,9 @@
 (defwindow power
   :monitor 0
   :geometry (geometry
-    :x "690px"
-    :y "370px"
-    :width "315px"
+    :x "785px"
+    :y "345px"
+    :width "350px"
     :height "50px"
     :anchor "top left")
   :stacking "fg"
@@ -62,7 +62,7 @@
 (defwindow packages
   :monitor 0
   :geometry (geometry
-    :x "1020px"
+    :x "1145px"
     :y "410px"
     :width "200px"
     :height "184px"
@@ -77,9 +77,9 @@
 (defwindow time
   :monitor 0
   :geometry (geometry
-    :x "690px"
+    :x "785px"
     :y "200px"
-    :width "50px"
+    :width "350px"
     :height "50px"
     :anchor "top left")
   :stacking "fg"

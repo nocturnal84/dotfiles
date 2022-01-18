@@ -1,14 +1,14 @@
 (defpoll hour :initial "12" :interval "5s" `date +'%I'`)
 (defpoll minute :initial "00" :interval "5s" `date +'%M'`)
 (defpoll meridiem :initial "AM" :interval "5s" `date +'%p'`)
-(defpoll day :initial "Sunday" :interval "10s" `date +'%A'`)
+(defpoll day :initial "Sunday" :interval "10s" `date +'%a'`)
 (defpoll date :initial "1" :interval "10s" `date +'%e'`)
 (defwidget time []
-  (box :orientation "h" :space-evenly true :width 200 :height 50 :hexpand false :vexpand false
+  (box :orientation "h" :space-evenly true :width 350 :height 50 :hexpand false :vexpand false
     (label :class "hour" :valign "start" :wrap true :limit-width 25 :text hour)
     (label :class "minute" :valign "end" :wrap true :limit-width 25 :text minute)
     (box :orientation "v" :spacing 25 :space-evenly false :vexpand false :hexpand false
-      (label :class "medidiem" :valign "start" :halign "end" :text meridiem)
+      (label :class "medidiem" :valign "start" :halign "end" :style "color: ${ meridiem == 'PM' ? '#0281b8' : '#50dafe'};" :text meridiem)
       (label :class "date" :valign "end" :halign "end" :text "${day} ${date}")
     )
   )

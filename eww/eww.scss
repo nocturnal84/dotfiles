@@ -1,6 +1,7 @@
 * {
   all: unset;
 }
+
 window {
   font-family: Nunito;
   font-size: 19px;
@@ -106,10 +107,14 @@ label.artist {
   color: #9858ac;
 }
 
+.system {
+  padding: 0 20px;
+}
+
 .system label {
   font-family: 'Hasklug Nerd Font Mono';
-  font-size: 32px;
-  padding: 0 15px;
+  font-size: 30px;
+  padding: 0 15px 0 0;
 }
 
 .system scale trough {
@@ -145,6 +150,13 @@ label.artist {
   }
 }
 
+.system .temp {
+  color: #9d3f40;
+  scale trough highlight {
+    background-color: #9d3f40;
+  }
+}
+
 .logout, .reboot, .shutdown, .lock {
   font-size: 64px;
   font-weight: 700;
@@ -176,21 +188,21 @@ label.artist {
 }
 
 .time {
-  font-weight: 700;
+  font-family: Bungee;
   padding: 20px;
 }
+
 .hour, .minute {
-  font-family: "Hasklug Nerd Font Mono";
   font-size: 70px;
-  color: #27a9f4;
+  color: #764284;
 }
 
 .medidiem {
-  color: #546e2d;
   font-size: 48px;
 }
 
 .date {
-  color: #d0c45c;
-  font-weight: 300;
+  font-family: Gruppo;
+  color: #546e2d;
+  font-size: 22px;
 }
