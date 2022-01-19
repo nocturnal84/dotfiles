@@ -4,87 +4,29 @@
 (include "./power.yuck")
 (include "./packages.yuck")
 (include "./time.yuck")
+(include "./profile.yuck")
 (defwindow music 
            :monitor 0
-           :geometry (geometry :x "495px"
-                               :y "200px"
-                               :width "200px"
-                               :height "394px"
+           :geometry (geometry :x "10px"
+                               :y "50px"
+                               :width "300px"
+                               :height "1010px"
                                :anchor "top left")
            :stacking "fg"
            :reserve (struts :distance "40px" :side "top")
            :windowtype "normal"
            :wm-ignore true
-  (music)
-)
-(defwindow fetch
-  :monitor 0
-  :geometry (geometry
-    :x "1145px"
-    :y "200px"
-    :width "200px"
-    :height "200px"
-    :anchor "top left")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "normal"
-  :wm-ignore true
-  (fetch)
-)
-(defwindow system
-  :monitor 0
-  :geometry (geometry
-    :x "785px"
-    :y "435px"
-    :width "350px"
-    :height "159px"
-    :anchor "top left")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "normal"
-  :wm-ignore true
-  (system)
-)
-(defwindow power
-  :monitor 0
-  :geometry (geometry
-    :x "785px"
-    :y "345px"
-    :width "350px"
-    :height "50px"
-    :anchor "top left")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "normal"
-  :wm-ignore true
-  (power)
-)
-(defwindow packages
-  :monitor 0
-  :geometry (geometry
-    :x "1145px"
-    :y "410px"
-    :width "200px"
-    :height "184px"
-    :anchor "top left")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "normal"
-  :wm-ignore true
-  (packages)
-)
-
-(defwindow time
-  :monitor 0
-  :geometry (geometry
-    :x "785px"
-    :y "200px"
-    :width "350px"
-    :height "50px"
-    :anchor "top left")
-  :stacking "fg"
-  :reserve (struts :distance "40px" :side "top")
-  :windowtype "normal"
-  :wm-ignore true
-  (time)
+  (box :class "dashboard" :orientation "v" :space-evenly false :spacing 10
+    (time)
+    (box :orientation "h" :space-evenly true :spacing 10
+      (profile)
+      (packages)
+    )
+    (music)
+    (box :orientation "h" :space-evenly false :spacing 10
+      (fetch)
+      (system)
+    )
+    (power)
+  )
 )

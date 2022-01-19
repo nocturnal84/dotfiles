@@ -8,7 +8,7 @@
 (defpoll uptimeh :initial "0 hours" :interval "1m" `uptime -p | awk '{ print $2 " " $3 }' | sed 's/,//'`)
 (defpoll uptimem :initial "0 minutes" :interval "1m" `uptime -p | awk '{ print $4 " " $5 }'`)
 (defwidget fetch []
-  (box :class "fetch" :orientation "v" :space-evenly false
+  (box :class "fetch-box" :orientation "v" :space-evenly false
     (label :class "fetch-header" :text "${user}@${host}")
 
     (box :class "fetch-rows" :orientation "h" :space-evenly false :halign "center"

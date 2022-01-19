@@ -1,25 +1,24 @@
 (defpoll cputemp :initial 0 :interval "5s" `echo $(( $(< "/sys/class/hwmon/hwmon1/temp1_input") * 100 / 100000 ))`)
 (defwidget system []
-  (box :class "system" :orientation "v" :space-evenly true :width 350
-    (box :class "cpu" :orientation "h" :space-evenly false
-      (label :text "")
-      (scale :hexpand true :min 0 :max 100 :value {EWW_CPU.avg} :active false)
+  (box :class "system-box" :orientation "v" :space-evenly true :spacing 20 :hexpand true
+    (box :orientation "h" :space-evenly true
+      (circular-progress :class "cpu" :width 75 :height 75 :halign "center" :valign "center" :value {EWW_CPU.avg} :thickness 8 :clockwise true :start-at 75
+        (label :height 75 :width 75 :halign "center" :valign "center" :text "")
+      )
+      (circular-progress :class "temp" :width 75 :height 75 :halign "center" :valign "center" :value {cputemp} :thickness 8 :clockwise true :start-at 75
+        (label :height 75 :width 75 :halign "center" :valign "center" :text "")
+      )
     )
-    (box :class "temp" :orientation "h" :space-evenly false
-      (label :text "")
-      (scale :hexpand true :min 0 :max 90 :value {cputemp} :active false)
-    )
-    (box :class "memory" :orientation "h" :space-evenly false
-      (label :text "﬙")
-      (scale :hexpand true :min 0 :max 100 :value {EWW_RAM.used_mem_perc} :active false)
-    )
-    (box :class "disk" :orientation "h" :space-evenly false
-      (label :text "")
-      (scale :hexpand true :min 0 :max 100 :value
-        {100 * 
+    (box :orientation "h" :space-evenly true
+      (circular-progress :class "memory" :width 75 :height 75 :halign "center" :valign "center" :value {EWW_RAM.used_mem_perc} :thickness 8 :clockwise true :start-at 75
+        (label :halign "center" :valign "center" :text "")
+      )
+      (circular-progress :class "disk" :width 75 :height 75 :halign "center" :valign "center" :value {100 * 
         (EWW_DISK["/home"].used + EWW_DISK["/"].used + EWW_DISK["/tmp"].used + EWW_DISK["/var"].used + EWW_DISK["/boot/efi"].used) / 
         (EWW_DISK["/home"].total + EWW_DISK["/"].total + EWW_DISK["/tmp"].total + EWW_DISK["/var"].total + EWW_DISK["/boot/efi"].total)
-        } :active false)
+        } :thickness 8 :clockwise true :start-at 75
+        (label :halign "center" :valign "center" :text "")
+      )
     )
   )
 )

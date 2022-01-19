@@ -13,32 +13,28 @@ window {
   border-radius: 10px;
 }
 
-.cmus {
-  padding: 20px 0 0 0;
-}
-
-.cmus .cover {
+.music-box .cover {
   background-size: cover;
   border: 2px solid #1a2d3b;
   border-radius: 5px;
   box-shadow: 2px 2px 7px #111;
 }
 
-.cmus .controls {
+.music-box .controls {
   font-family: 'Hasklug Nerd Font Mono';
   font-size: 24px;
 }
 
-.cmus .controls .toggle {
+.music-box .controls .toggle {
   font-size: 48px;
   color: #6c9c39;
 }
 
-.cmus scale {
+.music-box scale {
   padding: 20px;
 }
 
-.cmus scale trough {
+.music-box scale trough {
 	background-color: #1a2d3b;
 	border-radius: 16px;
 	min-height: 15px;
@@ -46,11 +42,11 @@ window {
   box-shadow: 0 -2px 2px rgba(34, 34, 34, 0.5) inset;
 }
 
-.cmus scale trough highlight {
+.music-box scale trough highlight {
 	border-radius: 16px;
 }
 
-.cmus scale trough highlight {
+.music-box scale trough highlight {
 	background-color: #764284;
 }
 
@@ -62,11 +58,6 @@ label.artist {
   color: #1475a2;
   font-weight: 500;
   font-size: 14px;
-}
-
-
-.fetch {
-  padding: 10px 0;
 }
 
 .fetch-header {
@@ -107,17 +98,11 @@ label.artist {
   color: #9858ac;
 }
 
-.system {
+.system-box {
   padding: 0 20px;
 }
 
-.system label {
-  font-family: 'Hasklug Nerd Font Mono';
-  font-size: 30px;
-  padding: 0 15px 0 0;
-}
-
-.system scale trough {
+.system-box scale trough {
 	background-color: #1a2d3b;
 	border-radius: 16px;
 	min-height: 15px;
@@ -125,32 +110,39 @@ label.artist {
   box-shadow: 0 -2px 2px rgba(34, 34, 34, 0.5) inset;
 }
 
-.system scale trough highlight {
+.system-box scale trough highlight {
 	border-radius: 16px;
 }
 
-.system .cpu {
+.system-box .cpu {
+  font-family: 'Hasklug Nerd Font Mono';
+  font-size: 30px;
   color: #9858ac;
   scale trough highlight {
 	  background-color: #9858ac;
   }
 }
 
-.system .memory {
+.system-box .memory {
   color: #1475a2;
+  font-family: 'Font Awesome 5 Free';
   scale trough highlight {
     background-color: #1475a2;
   }
 }
 
-.system .disk {
+.system-box .disk {
+  font-family: 'Hasklug Nerd Font Mono';
+  font-size: 30px;
   color: #6c9c39;
   scale trough highlight {
     background-color: #6c9c39;
   }
 }
 
-.system .temp {
+.system-box .temp {
+  font-family: 'Hasklug Nerd Font Mono';
+  font-size: 30px;
   color: #9d3f40;
   scale trough highlight {
     background-color: #9d3f40;
@@ -187,9 +179,8 @@ label.artist {
   padding-right: 10px;
 }
 
-.time {
+.time-box {
   font-family: Bungee;
-  padding: 20px;
 }
 
 .hour, .minute {
@@ -208,3 +199,28 @@ label.artist {
 }
 
 circular-progress {background-color: #1a2d3b;}
+
+.dashboard {
+  border-radius: 20px;
+  padding: 10px;
+  background-color: #1a2d3b;
+}
+
+.profile-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 100%;
+  border: 2px solid #1a2d3b;
+  box-shadow: 2px 2px 7px #111;
+}
+
+.username {
+  font-family: Modak;
+}
+
+.profile-box, .time-box, .packages-box, .music-box, .fetch-box, .system-box, .power-box {
+  background-color: #223442;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 2px 2px 4px #222;
+}

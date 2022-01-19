@@ -1,5 +1,5 @@
 (defwidget power []
-  (box :orientation "h" :space-evenly true
+  (box :class "power-box" :orientation "h" :space-evenly true
     (button :class "lock" :width 75 :height 75 :onclick `dm-tool lock` "")
     (button :class "logout" :width 75 :height 75 :onclick `i3-msg exit` "")
     (button :class "reboot" :width 75 :height 75 :onclick `systemctl reboot` "ﰇ")

@@ -6,15 +6,17 @@
 (defpoll position :initial 0 :interval "1s" `cmus-remote -Q | awk '/^position/{ print $2 }'`)
 (defpoll duration :initial 0 :interval "1s" `cmus-remote -Q | awk '/^duration/{ print $2 }'`)
 (defwidget music []
-  (box :class "cmus" :width 240 :height 287 :orientation "v" :space-evenly false :vexpand false
-    (box :halign "center" :class "cover" :width 200 :height 200 :style "background-image: url('${cover}');")
-    (label :class "song" :text song :limit-width 20)
-    (label :class "artist" :text artist :limit-width 20)
-    (scale :min 0 :max duration :value position)
-    (box :class "controls" :orientation "h" :space-evenly false :halign "center" :vexpand false :hexpand false :spacing 25
-      (button :class "prev" :onclick "cmus-remote -r" "玲")
-      (button :class "toggle" :onclick "cmus-remote -u" {status == "playing" ? "" : ""})
-      (button :class "next" :onclick "cmus-remote -n" "怜")
+  (box :class "music-box" :orientation "h" :space-evenly false :vexpand false :hexpand false
+    (box :orientation "v" :space-evenly false :hexpand false
+      (label :class "song" :text song :limit-width 20)
+      (label :class "artist" :text artist :limit-width 20)
+      (scale :min 0 :max duration :value position)
+      (box :class "controls" :orientation "h" :space-evenly false :halign "center" :vexpand false :hexpand false :spacing 25
+        (button :class "prev" :onclick "cmus-remote -r" "玲")
+        (button :class "toggle" :onclick "cmus-remote -u" {status == "playing" ? "" : ""})
+        (button :class "next" :onclick "cmus-remote -n" "怜")
+      )    
     )
+    (box :halign "center" :valign "center" :class "cover" :width 150 :height 150 :style "background-image: url('${cover}');")
   )
 )
