@@ -1,7 +1,9 @@
 (deflisten profileimage :initial "" `echo "/home/$USER/.face"`)
+(defpoll uptime :initial "0m" :interval "1m" `./scripts/user-time`)
 (defwidget profile []
   (box :class "profile-box" :orientation "v" :space-evenly false :hexpand false :width 100
     (box :halign "center" :class "profile-image" :width 100 :height 100 :style "background-image: url('file://${profileimage}');" :hexpand false :space-evenly false)
     (label :class "username" :text user)
+    (label :class "uptime" :text {uptime})
   )
 )

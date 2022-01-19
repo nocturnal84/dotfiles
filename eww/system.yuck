@@ -2,22 +2,22 @@
 (defwidget system []
   (box :class "system-box" :orientation "v" :space-evenly true :spacing 20 :hexpand true
     (box :orientation "h" :space-evenly true
-      (circular-progress :class "cpu" :width 75 :height 75 :halign "center" :valign "center" :value {EWW_CPU.avg} :thickness 8 :clockwise true :start-at 75
-        (label :height 75 :width 75 :halign "center" :valign "center" :text "")
+      (circular-progress :class "cpu" :width 75 :height 75 :value {EWW_CPU.avg} :thickness 8 :clockwise true :start-at 75
+        (label :text "")
       )
-      (circular-progress :class "temp" :width 75 :height 75 :halign "center" :valign "center" :value {cputemp} :thickness 8 :clockwise true :start-at 75
-        (label :height 75 :width 75 :halign "center" :valign "center" :text "")
+      (circular-progress :class "temp" :width 75 :height 75 :value {cputemp} :thickness 8 :clockwise true :start-at 75
+        (label :text "")
       )
     )
     (box :orientation "h" :space-evenly true
-      (circular-progress :class "memory" :width 75 :height 75 :halign "center" :valign "center" :value {EWW_RAM.used_mem_perc} :thickness 8 :clockwise true :start-at 75
-        (label :halign "center" :valign "center" :text "")
+      (circular-progress :class "memory" :width 75 :height 75 :value {EWW_RAM.used_mem_perc} :thickness 8 :clockwise true :start-at 75
+        (label :text "")
       )
-      (circular-progress :class "disk" :width 75 :height 75 :halign "center" :valign "center" :value {100 * 
+      (circular-progress :class "disk" :width 75 :height 75 :value {100 * 
         (EWW_DISK["/home"].used + EWW_DISK["/"].used + EWW_DISK["/tmp"].used + EWW_DISK["/var"].used + EWW_DISK["/boot/efi"].used) / 
         (EWW_DISK["/home"].total + EWW_DISK["/"].total + EWW_DISK["/tmp"].total + EWW_DISK["/var"].total + EWW_DISK["/boot/efi"].total)
         } :thickness 8 :clockwise true :start-at 75
-        (label :halign "center" :valign "center" :text "")
+        (label :text "")
       )
     )
   )

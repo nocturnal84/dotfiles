@@ -17,6 +17,6 @@
         (button :class "next" :onclick "cmus-remote -n" "怜")
       )    
     )
-    (box :halign "center" :valign "center" :class "cover" :width 150 :height 150 :style "background-image: url('${cover}');")
+    (box :halign "center" :valign "center" :class {status == "playing" ? "cover-play" : "cover"} :width 150 :height 150 :style "background-image: url('${cover}');")
   )
 )

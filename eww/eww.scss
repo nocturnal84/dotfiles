@@ -13,10 +13,14 @@ window {
   border-radius: 10px;
 }
 
-.music-box .cover {
+.music-box .cover, .music-box .cover-play {
   background-size: cover;
   border: 2px solid #1a2d3b;
   border-radius: 5px;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.music-box .cover-play {
   box-shadow: 2px 2px 7px #111;
 }
 
@@ -215,7 +219,13 @@ circular-progress {background-color: #1a2d3b;}
 }
 
 .username {
-  font-family: Modak;
+  font-family: "Press Start 2P";
+  margin: 5px 0px;
+}
+
+.uptime {
+  font-family: "Press Start 2P";
+  font-size: 14px;
 }
 
 .profile-box, .time-box, .packages-box, .music-box, .fetch-box, .system-box, .power-box {
