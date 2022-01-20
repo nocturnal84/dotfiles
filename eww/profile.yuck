@@ -3,7 +3,7 @@
 (defwidget profile []
   (box :class "profile-box" :orientation "v" :space-evenly false :hexpand false :width 100
     (box :halign "center" :class "profile-image" :width 100 :height 100 :style "background-image: url('file://${profileimage}');" :hexpand false :space-evenly false)
-    (label :class "username" :text user)
-    (label :class "uptime" :text {uptime})
+    (label :class "username" :halign "center" :text user)
+    (label :class "uptime" :halign "center" :text {uptime})
   )
 )

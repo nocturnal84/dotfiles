@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 seconds=$(awk '{ print $1 }' < /proc/uptime)
 
+# Calculate days, hours, and minutes
 d=$(echo "$seconds / 3600 / 24" | bc) 
 h=$(echo "$seconds / 3600 % 24" | bc)
 m=$(echo "$seconds / 60 % 60" | bc)
 
-uptime="0m"
-
+uptime=""
 if [[ $d != 0 ]]; then
   uptime="${d}d "
 fi
@@ -19,4 +19,7 @@ if [[ $m != 0 ]]; then
   uptime="${uptime}${m}m "
 fi
 
-echo "$uptime"
+# Default to 0m if there's no uptime yet
+uptime="${uptime:-0m}"
+# Trim any trailing whitespace
+echo "${uptime%% }"
