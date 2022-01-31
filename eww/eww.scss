@@ -1,3 +1,6 @@
+/* Pull in themes by uncommenting */
+@use "./mellow-marsh.scss" as theme;
+
 * {
   all: unset;
 }
@@ -25,13 +28,13 @@ window {
 }
 
 .music-box .controls {
-  font-family: 'Hasklug Nerd Font Mono';
+  font-family: theme.$mono-font;
   font-size: 24px;
 }
 
 .music-box .controls .toggle {
   font-size: 48px;
-  color: #6c9c39;
+  color: theme.$music-toggle;
 }
 
 .music-box scale {
@@ -51,15 +54,15 @@ window {
 }
 
 .music-box scale trough highlight {
-	background-color: #764284;
+	background-color: theme.$music-progress;
 }
 
 label.song {
-  color: #764284;
+  color: theme.$music-title;
   font-weight: 700;
 }
 label.artist {
-  color: #1475a2;
+  color: theme.$music-artist;
   font-weight: 500;
   font-size: 14px;
 }
@@ -70,7 +73,7 @@ label.artist {
 }
 
 .fetch-l-col, .fetch-r-col {
-  font-family: 'Hasklug Nerd Font Mono';
+  font-family: theme.$mono-font;
 }
 
 .fetch-l-col {
@@ -83,23 +86,23 @@ label.artist {
 }
 
 .fetch-os {
-  color: #9d3f40;
+  color: theme.$fetch-os;
 }
 
 .fetch-kernel {
-  color: #6c9c39;
+  color: theme.$fetch-kernel;
 }
 
 .fetch-packages {
-  color: #50dafe;
+  color: theme.$fetch-packages;
 }
 
 .fetch-wm {
-  color: #0281b8;
+  color: theme.$fetch-wm;
 }
 
 .fetch-term {
-  color: #9858ac;
+  color: theme.$fetch-term;
 }
 
 .system-box {
@@ -119,7 +122,7 @@ label.artist {
 }
 
 .system-box .cpu {
-  font-family: 'Hasklug Nerd Font Mono';
+  font-family: theme.$mono-font;
   font-size: 30px;
   color: #9858ac;
   scale trough highlight {
@@ -129,14 +132,14 @@ label.artist {
 
 .system-box .memory {
   color: #1475a2;
-  font-family: 'Font Awesome 5 Free';
+  font-family: theme.$awesome-font;
   scale trough highlight {
     background-color: #1475a2;
   }
 }
 
 .system-box .disk {
-  font-family: 'Hasklug Nerd Font Mono';
+  font-family: theme.$mono-font;
   font-size: 30px;
   color: #6c9c39;
   scale trough highlight {
@@ -145,7 +148,7 @@ label.artist {
 }
 
 .system-box .temp {
-  font-family: 'Hasklug Nerd Font Mono';
+  font-family: theme.$mono-font;
   font-size: 30px;
   color: #9d3f40;
   scale trough highlight {
@@ -184,7 +187,7 @@ label.artist {
 }
 
 .time-box {
-  font-family: Bungee;
+  font-family: theme.$time-font;
 }
 
 .hour, .minute {
@@ -219,12 +222,12 @@ circular-progress {background-color: #1a2d3b;}
 }
 
 .username {
-  font-family: "Press Start 2P";
+  font-family: theme.$profile-font;
   margin: 10px 0px;
 }
 
 .uptime {
-  font-family: "Press Start 2P";
+  font-family: theme.$profile-font;
   font-size: 14px;
 }
 
