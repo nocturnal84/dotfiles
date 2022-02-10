@@ -1,7 +1,17 @@
+$text-font: Nunito;
 $mono-font: 'Hasklug Nerd Font Mono';
-$awesome-font: 'Font Awesome 5 Free';
+$awesome-font: 'Font Awesome 6 Free';
 $time-font: Bungee;
 $profile-font: "Press Start 2P";
+$date-font: Gruppo;
+
+$text-color: #f2f0f1;
+
+$dashboard-background: #1a2d3b;
+$widget-background: #223442;
+$trough-background: #1a2d3b;
+
+$border-color: #1a2d3b;
 
 $music-toggle: #6c9c39;
 $music-progress: #764284;
@@ -13,3 +23,18 @@ $fetch-kernel: #6c9c39;
 $fetch-packages: #50dafe;
 $fetch-wm: #0281b8;
 $fetch-term: #9858ac;
+
+$system-cpu: #9858ac;
+$system-memory: #1475a2;
+$system-disk: #6c9c39;
+$system-temp: #9d3f40;
+
+$power-logout: #9858ac;
+$power-reboot: #d0c45c;
+$power-shutdown: #9d3f40;
+$power-lock: #1475a2;
+
+$packages-icon: #50dafe;
+
+$time-digits: #764284;
+$time-date: #546e2d;

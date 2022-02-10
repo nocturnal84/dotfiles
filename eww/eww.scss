@@ -6,19 +6,17 @@
 }
 
 window {
-  font-family: Nunito;
+  font-family: theme.$text-font;
   font-size: 19px;
   background-color: transparent;
-  color: #f2f0f1;
+  color: theme.$text-color;
   padding: 20px;
-  background-color: #223442;
-  border: 4px solid #1a2d3b;
   border-radius: 10px;
 }
 
 .music-box .cover, .music-box .cover-play {
   background-size: cover;
-  border: 2px solid #1a2d3b;
+  border: 2px solid theme.$border-color;
   border-radius: 5px;
   transition: box-shadow 0.3s ease-out;
 }
@@ -42,7 +40,7 @@ window {
 }
 
 .music-box scale trough {
-	background-color: #1a2d3b;
+	background-color: theme.$trough-background;
 	border-radius: 16px;
 	min-height: 15px;
 	min-width: 240px;
@@ -110,7 +108,7 @@ label.artist {
 }
 
 .system-box scale trough {
-	background-color: #1a2d3b;
+  background-color: theme.$trough-background;
 	border-radius: 16px;
 	min-height: 15px;
 	min-width: 240px;
@@ -124,35 +122,35 @@ label.artist {
 .system-box .cpu {
   font-family: theme.$mono-font;
   font-size: 30px;
-  color: #9858ac;
+  color: theme.$system-cpu;
   scale trough highlight {
-	  background-color: #9858ac;
+	  background-color: theme.$system-cpu;
   }
 }
 
 .system-box .memory {
-  color: #1475a2;
+  color: theme.$system-memory;
   font-family: theme.$awesome-font;
   scale trough highlight {
-    background-color: #1475a2;
+    background-color: theme.$system-memory;
   }
 }
 
 .system-box .disk {
   font-family: theme.$mono-font;
   font-size: 30px;
-  color: #6c9c39;
+  color: theme.$system-disk;
   scale trough highlight {
-    background-color: #6c9c39;
+    background-color: theme.$system-disk;
   }
 }
 
 .system-box .temp {
   font-family: theme.$mono-font;
   font-size: 30px;
-  color: #9d3f40;
+  color: theme.$system-temp;
   scale trough highlight {
-    background-color: #9d3f40;
+    background-color: theme.$system-temp;
   }
 }
 
@@ -162,27 +160,27 @@ label.artist {
 }
 
 .logout {
-  color: #9858ac;
+  color: theme.$power-logout;
 }
 
 .reboot {
-  color: #d0c45c;
+  color: theme.$power-reboot;
 }
 
 .shutdown {
-  color: #9d3f40;
+  color: theme.$power-shutdown;
 }
 
 .lock {
   font-size: 50px;
-  color: #1475a2;
+  color: theme.$power-lock;
 }
 .update-container {
   font-size: 64px;
 }
 
 .package-icon {
-  color: #50dafe;
+  color: theme.$packages-icon;
   padding-right: 10px;
 }
 
@@ -192,7 +190,7 @@ label.artist {
 
 .hour, .minute {
   font-size: 70px;
-  color: #764284;
+  color: theme.$time-digits;
 }
 
 .medidiem {
@@ -200,24 +198,26 @@ label.artist {
 }
 
 .date {
-  font-family: Gruppo;
-  color: #546e2d;
+  font-family: theme.$date-font;
+  color: theme.$time-date;
   font-size: 22px;
 }
 
-circular-progress {background-color: #1a2d3b;}
+circular-progress {
+  background-color: theme.$trough-background;
+}
 
 .dashboard {
   border-radius: 20px;
   padding: 10px;
-  background-color: #1a2d3b;
+  background-color: theme.$dashboard-background;
 }
 
 .profile-image {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 100%;
-  border: 2px solid #1a2d3b;
+  border: 2px solid theme.$border-color;
   box-shadow: 2px 2px 7px #111;
 }
 
@@ -232,7 +232,7 @@ circular-progress {background-color: #1a2d3b;}
 }
 
 .profile-box, .time-box, .packages-box, .music-box, .fetch-box, .system-box, .power-box {
-  background-color: #223442;
+  background-color: theme.$widget-background;
   border-radius: 10px;
   padding: 20px;
   box-shadow: 2px 2px 4px #222;
